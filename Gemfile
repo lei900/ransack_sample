@@ -25,6 +25,7 @@ gem 'ransack'
 gem 'faker'
 gem 'rails-i18n'
 gem 'kaminari'
+gem 'pg'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -15,4 +15,7 @@ Category.create(name: "記事")
   Article.create(title: Faker::Lorem.sentences(number: 1),
       body: Faker::Lorem.paragraph(sentence_count: 5),
       category_id: Faker::Number.between(from: 1, to: Category.count))
+  Machine.create(
+    name: Faker::Internet.url,
+    ip: Faker::Internet.ip_v4_address)
 end
