@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @article.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>カテゴリ:</strong>
+  <%= @article.category.name %>
+</p>
+
+<p>
+  <strong>内容:</strong>
   <%= @article.body %>
 </p>
 

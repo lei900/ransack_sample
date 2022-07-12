@@ -7,6 +7,7 @@
 <table>
   <thead>
     <tr>
+      <th><%= sort_link(@q, :category_name, "カテゴリ", default_order: :asc) %></th>
       <th><%= sort_link(@q, :title, "タイトル", default_order: :asc) %></th>
       <th><%= sort_link(@q, :body, "投稿内容", default_order: :asc) %></th>
       <th colspan="3"></th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
+        <td><%= article.category.name %></td>
         <td><%= article.title %></td>
         <td><%= article.body %></td>
         <td><%= link_to 'Show', article %></td>

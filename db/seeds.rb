@@ -5,7 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.create(name: "漫画")
+Category.create(name: "映画")
+Category.create(name: "ブログ")
+Category.create(name: "レビュ")
+Category.create(name: "記事")
+
 50.times do |x|
   Article.create(title: Faker::Lorem.sentences(number: 1),
-      body: Faker::Lorem.paragraph(sentence_count: 5))
+      body: Faker::Lorem.paragraph(sentence_count: 5),
+      category_id: Faker::Number.between(from: 1, to: Category.count))
 end
